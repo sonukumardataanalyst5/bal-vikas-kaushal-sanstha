@@ -406,6 +406,24 @@ footer .mantra span{font-family:'Baloo 2','Plus Jakarta Sans',sans-serif;font-si
 
 .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .js .reveal.visible{opacity:1;transform:none}
+/* Mobile performance — lighter glass on phones so scrolling stays smooth.
+   The two heaviest things on a phone GPU are the 70px-blurred drifting orbs and
+   the many 14–20px backdrop-filter layers (each forces a backdrop repaint on scroll).
+   On ≤720px: orbs go static + smaller blur, backdrop blur is halved — the glass
+   look stays, the jank goes. */
+@media(max-width:720px){
+  .orb{animation:none;filter:blur(40px);opacity:.45}
+  .orb-c{display:none}
+  .glass{-webkit-backdrop-filter:blur(10px) saturate(160%);backdrop-filter:blur(10px) saturate(160%);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 10px 26px rgba(0,0,0,.3)}
+  .glass-soft{-webkit-backdrop-filter:blur(8px) saturate(150%);backdrop-filter:blur(8px) saturate(150%)}
+  header{-webkit-backdrop-filter:blur(10px) saturate(160%);backdrop-filter:blur(10px) saturate(160%)}
+  .trustbar{-webkit-backdrop-filter:blur(8px) saturate(150%);backdrop-filter:blur(8px) saturate(150%)}
+  footer{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+  .ribbon{-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+  .btn-glass{-webkit-backdrop-filter:blur(8px) saturate(150%);backdrop-filter:blur(8px) saturate(150%)}
+  .chip{-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+  .c-cat{-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .js .reveal{opacity:1;transform:none;transition:none}
