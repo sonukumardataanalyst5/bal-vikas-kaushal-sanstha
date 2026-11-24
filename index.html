@@ -32,7 +32,7 @@ function imgFB(img,alts,fb){
 }
 *{margin:0;padding:0;box-sizing:border-box}
 [hidden]{display:none!important}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:clip}body{overflow-x:clip}
 body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--navy);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
 body.no-scroll{overflow:hidden}
 img,svg{display:block;max-width:100%}
@@ -97,7 +97,7 @@ header.scrolled{box-shadow:0 6px 24px rgba(2,6,23,.08);border-bottom:1px solid v
 .org-name{font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:800;color:var(--navy);line-height:1.2;letter-spacing:-.01em}
 .org-sub{font-size:.85rem;font-weight:800;color:var(--amber-d);letter-spacing:.08em;text-transform:uppercase;margin:6px 0 16px}
 
-.hero{padding:52px 0 64px;display:grid;grid-template-columns:1.05fr .95fr;grid-template-areas:"text box" "img box";gap:34px 52px;align-items:start}
+.hero{padding:52px 20px 64px;display:grid;grid-template-columns:1.05fr .95fr;grid-template-areas:"text box" "img box";gap:34px 52px;align-items:start}
 .hero-text{grid-area:text}
 .hero-img{grid-area:img;position:relative}
 .donate-box{grid-area:box}
@@ -222,7 +222,7 @@ header.scrolled{box-shadow:0 6px 24px rgba(2,6,23,.08);border-bottom:1px solid v
 .cta-band p{font-weight:600;margin-top:6px}
 
 footer{background:var(--navy);color:#CBD5E1;margin-top:84px}
-.f-grid{display:grid;grid-template-columns:1.6fr 1fr 1.3fr 1.4fr;gap:36px;padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:1.6fr 1fr 1.3fr 1.4fr;gap:36px;padding:56px 20px 40px}
 footer h4{color:#fff;font-size:.82rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
 footer .f-mission{font-size:.88rem;color:#94A3B8;margin-top:14px;max-width:300px}
 footer .mantra{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
@@ -244,7 +244,7 @@ footer .mantra span{font-size:.72rem;font-weight:700;background:#1E293B;padding:
 .f-bottom .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .f-legal{font-size:.72rem;color:#64748B;margin-top:12px}
 @media(max-width:960px){.f-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.f-grid{grid-template-columns:1fr;gap:28px;padding:44px 0 30px}}
+@media(max-width:560px){.f-grid{grid-template-columns:1fr;gap:28px;padding:44px 20px 30px}}
 
 .wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(2,6,23,.28);transition:.2s}
 .wa-float:hover{transform:scale(1.07)}
