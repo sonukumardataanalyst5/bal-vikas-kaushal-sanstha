@@ -112,7 +112,7 @@ main,header,.ribbon,.trustbar,footer{position:relative;z-index:1}
 .ribbon{background:rgba(245,158,11,.14);border-bottom:1px solid rgba(245,158,11,.35);color:#fde68a;font-size:.8rem;font-weight:600;text-align:center;padding:8px 40px 8px 16px;position:relative;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .ribbon button{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:1rem;color:#fde68a;padding:2px 6px}
 
-/* Trustbar — phone number gets its own full row on mobile (no wrap, no clip) */
+/* Trustbar — phone number gets its own full row on small screens (no wrap, no clip); stacked layout kicks in at 860px so the bar never squeezes on phones/tablets */
 .trustbar{color:#c6d0e0;font-size:.78rem;font-weight:600;border-bottom:1px solid var(--glass-line);background:rgba(6,10,19,.55);-webkit-backdrop-filter:blur(12px) saturate(160%);backdrop-filter:blur(12px) saturate(160%)}
 .trustbar .container{display:flex;justify-content:space-between;align-items:center;gap:8px 18px;padding-top:8px;padding-bottom:8px}
 .trustbar .tb-left{display:flex;align-items:center;gap:7px;min-width:0}
@@ -123,8 +123,8 @@ main,header,.ribbon,.trustbar,footer{position:relative;z-index:1}
 .trustbar a:hover{color:var(--gold)}
 .tb-phone{white-space:nowrap;font-size:.86rem;font-weight:800;color:#fff;letter-spacing:.01em}
 .tb-phone svg{color:var(--gold)}
-@media(max-width:720px){
-  .trustbar .container{flex-wrap:wrap;row-gap:3px;padding-top:9px;padding-bottom:9px}
+@media(max-width:860px){
+  .trustbar .container{flex-wrap:wrap;row-gap:6px;padding-top:10px;padding-bottom:10px}
   .trustbar .tb-left{font-size:.72rem}
   .trustbar .tb-right .tb-mail{display:none}
   .trustbar .tb-phone{flex-basis:100%;order:2;font-size:.9rem}
