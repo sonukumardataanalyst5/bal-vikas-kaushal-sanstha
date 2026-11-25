@@ -47,11 +47,12 @@
   }
   function drawQr(text) {
     var box = $('#upiQr'); if (!window.qrcode) { box.textContent = ''; return; }
-    var q = window.qrcode(0, 'M'); q.addData(text); q.make();
+    var q = window.qrcode(0, 'H'); q.addData(text); q.make();
     var n = q.getModuleCount(), m = 3, d = '';
     for (var r = 0; r < n; r++) for (var c = 0; c < n; c++) if (q.isDark(r, c)) d += 'M' + (c + m) + ' ' + (r + m) + 'h1v1h-1z';
-    var s = n + m * 2;
-    box.innerHTML = '<svg viewBox="0 0 ' + s + ' ' + s + '" shape-rendering="crispEdges" aria-hidden="true"><rect width="' + s + '" height="' + s + '" fill="#fff"/><path d="' + d + '" fill="#000"/></svg>' + (sample ? '<span class="qr-sample">SAMPLE</span>' : '');
+    var s = n + m * 2, cx = s / 2, rOuter = +(s * 0.115).toFixed(2), rInner = +(s * 0.092).toFixed(2), fs = +(s * 0.115).toFixed(2), ty = +(cx + s * 0.04).toFixed(2);
+    var badge = sample ? '' : '<circle cx="' + cx + '" cy="' + cx + '" r="' + rOuter + '" fill="#fff"/><circle cx="' + cx + '" cy="' + cx + '" r="' + rInner + '" fill="#5f259f"/><text x="' + cx + '" y="' + ty + '" text-anchor="middle" fill="#fff" font-size="' + fs + '" font-weight="700" font-family="sans-serif">पे</text>';
+    box.innerHTML = '<svg viewBox="0 0 ' + s + ' ' + s + '" shape-rendering="crispEdges" aria-hidden="true"><rect width="' + s + '" height="' + s + '" fill="#fff"/><path d="' + d + '" fill="#111827"/>' + badge + '</svg>' + (sample ? '<span class="qr-sample">SAMPLE</span>' : '');
     box.setAttribute('data-upi', text);
   }
   function syncUpi() {
@@ -60,6 +61,8 @@
     $('#upiId').textContent = sample ? 'yourtrust@bank' : upiId; $('#upiSample').style.display = sample ? 'block' : 'none';
     var ppRow = $('#phonepeRow'), ppNo = (C.bank && C.bank.phonepe) || '';
     if (ppRow) { ppRow.style.display = (!sample && ppNo) ? '' : 'none'; if (ppNo) $('#phonepeNo').textContent = ppNo; }
+    if ($('#qrVpa')) $('#qrVpa').textContent = sample ? 'yourtrust@bank' : upiId;
+    if ($('#qrAmtPill')) $('#qrAmtPill').textContent = state.amt > 0 ? fmt(state.amt) + (L() === 'hi' ? ' · UPI से दें' : ' · Pay via UPI') : (L() === 'hi' ? 'कोई भी राशि · UPI' : 'Any Amount · UPI');
     var amtValid = state.amt >= MINONCE && state.amt <= MAXAMT, canQr = !sample && (state.amt === 0 || amtValid), link = upiLink(), a = $('#upiApp');
     box.classList.toggle('noamt', !canQr);
     if (canQr) drawQr(link); else $('#upiQr').innerHTML = '<span class="qr-wait">' + (L() === 'hi' ? 'सही राशि चुनें' : 'Enter a valid amount') + '</span>';
