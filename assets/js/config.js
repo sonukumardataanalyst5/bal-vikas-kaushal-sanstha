@@ -1,0 +1,37 @@
+/* ==========================================================
+   BVKS site defaults. Most of these can now be changed from the admin panel (/admin) once the site is on PHP hosting.
+   The admin's saved settings override the values below.
+   ========================================================== */
+window.BVKS = {
+  name_en: "Bal Vikas Kaushal Sanstha",
+  name_hi: "बाल विकास कौशल संस्था",
+  regNo: "13719",
+  president_en: "Shri Subodh Kumar",
+  president_hi: "श्री सुबोध कुमार",
+  phone: "9818805171",
+  whatsapp: "919818805171",
+  email: "info@balvikaskaushalsanstha.in",      // TODO confirm real email
+  address_en: "Faridabad, Haryana, India",       // TODO full address
+  address_hi: "फरीदाबाद, हरियाणा, भारत",
+
+  // ---- Payments ----
+  // Set paymentsLive:true after Razorpay keys are added in Vercel env vars
+  // (see README.md). While false, the donate page runs in DEMO mode.
+  paymentsLive: false,
+  razorpayKeyId: "",                              // not needed: the server sends its public key id with each payment
+  apiBase: "/api",
+  apiExt: ".php",                               // PHP API on GoDaddy/cPanel hosting
+  monthlyAmount: 100,   // fixed monthly Supporting Member amount (₹)
+  minOnce: 1,           // one-time: any amount from ₹1
+  maxAmount: 100000,
+  // ---- Look ----
+  theme: "forest",       // final palette: saffron | forest | teal | plum | clay
+  showThemes: false,      // palette preview picker; set to false once a palette is approved
+  has80G: false,                                 // flip to true only when 80G certificate is held
+  hasFCRA: false,
+
+  // ---- Bank transfer (TODO real details) ----
+  bank: { holder: "Bal Vikas Kaushal Sanstha", account: "", ifsc: "", bankName: "", upi: "", upiName: "" },
+
+  social: { facebook: "", instagram: "", youtube: "" }
+};

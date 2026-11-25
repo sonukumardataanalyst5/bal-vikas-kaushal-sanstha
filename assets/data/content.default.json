@@ -1,0 +1,1089 @@
+{
+ "version": 1,
+ "settings": {
+  "regNo": "13719",
+  "phone": "9818805171",
+  "whatsapp": "9818805171",
+  "email": "info@balvikaskaushalsanstha.in",
+  "president": {
+   "en": "Shri Subodh Kumar",
+   "hi": "श्री सुबोध कुमार"
+  },
+  "city": {
+   "en": "Faridabad, Haryana",
+   "hi": "फरीदाबाद, हरियाणा"
+  },
+  "address": {
+   "en": "Faridabad, Haryana, India (full address to be added)",
+   "hi": "फरीदाबाद, हरियाणा, भारत (पूरा पता जोड़ा जाएगा)"
+  },
+  "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=77.20%2C28.33%2C77.40%2C28.48&layer=mapnik",
+  "monthlyAmount": 100,
+  "minOnce": 1,
+  "maxAmount": 100000,
+  "chips": [
+   500,
+   1000,
+   2000,
+   3000,
+   5000,
+   10000
+  ],
+  "homeChips": [
+   500,
+   1000,
+   2000,
+   5000
+  ],
+  "paymentsLive": false,
+  "has80G": false,
+  "hasFCRA": false,
+  "razorpayKeyId": "",
+  "bank": {
+   "holder": "Bal Vikas Kaushal Sanstha",
+   "account": "",
+   "ifsc": "",
+   "bankName": "",
+   "upi": "",
+   "upiName": ""
+  },
+  "social": {
+   "facebook": "",
+   "instagram": "",
+   "youtube": ""
+  },
+  "monthlyTiers": [
+   {
+    "amount": 100,
+    "t": {
+     "en": "Monthly Support",
+     "hi": "मासिक सहयोग"
+    }
+   },
+   {
+    "amount": 200,
+    "t": {
+     "en": "Education Support",
+     "hi": "शिक्षा सहयोग"
+    }
+   },
+   {
+    "amount": 500,
+    "t": {
+     "en": "Special Support",
+     "hi": "विशेष सहयोग"
+    }
+   }
+  ]
+ },
+ "images": {
+  "homeAbout": "photo-1597743622436-c6b5661731e0",
+  "aboutMain": "photo-1597743622436-c6b5661731e0",
+  "ctaBand": "photo-1524069290683-0457abfe42c3",
+  "waysMonthly": "photo-1692269725980-495f94b9d7a4",
+  "waysOnce": "photo-1642140027869-03591a109d61",
+  "donateSide": "photo-1692269725911-87697c558be1",
+  "founder": "assets/img/founder.jpg"
+ },
+ "slides": [
+  {
+   "photo": "photo-1524069290683-0457abfe42c3",
+   "pos": "50% 38%",
+   "t": {
+    "en": "Every child deserves a future",
+    "hi": "हर बच्चे का भविष्य उज्ज्वल हो"
+   },
+   "d": {
+    "en": "No child's future should be dark because of poverty.",
+    "hi": "गरीबी के कारण किसी बच्चे का भविष्य अंधकारमय न हो।"
+   }
+  },
+  {
+   "photo": "photo-1692269725836-fbd72e98883f",
+   "pos": "50% 50%",
+   "t": {
+    "en": "Seva",
+    "hi": "सेवा"
+   },
+   "d": {
+    "en": "Serving people in need and the helpless, without any discrimination.",
+    "hi": "बिना किसी भेदभाव के जरूरतमंद और असहाय लोगों की सेवा।"
+   }
+  },
+  {
+   "photo": "photo-1635733631349-f9528ac28c36",
+   "pos": "50% 40%",
+   "t": {
+    "en": "Sahyog",
+    "hi": "सहयोग"
+   },
+   "d": {
+    "en": "Standing with families in education, health, food and social needs.",
+    "hi": "शिक्षा, स्वास्थ्य, भोजन और सामाजिक जरूरतों में परिवारों का साथ।"
+   }
+  },
+  {
+   "photo": "photo-1616674202799-054e7c831378",
+   "pos": "50% 50%",
+   "t": {
+    "en": "Samarpan",
+    "hi": "समर्पण"
+   },
+   "d": {
+    "en": "Working with full commitment for children's bright future.",
+    "hi": "बच्चों के उज्ज्वल भविष्य के लिए पूरी निष्ठा से कार्य।"
+   }
+  },
+  {
+   "photo": "photo-1609252509229-364936a1d1a2",
+   "pos": "50% 50%",
+   "t": {
+    "en": "Together",
+    "hi": "साथ मिलकर"
+   },
+   "d": {
+    "en": "Donors, volunteers and partners working side by side.",
+    "hi": "दानदाता, स्वयंसेवक और साझेदार कंधे से कंधा मिलाकर।"
+   }
+  }
+ ],
+ "how": [
+  {
+   "t": {
+    "en": "Listen",
+    "hi": "सुनना"
+   },
+   "d": {
+    "en": "We meet families and communities to understand what each child and household truly needs.",
+    "hi": "हम परिवारों और समुदायों से मिलकर समझते हैं कि हर बच्चे और परिवार को वास्तव में क्या चाहिए।"
+   }
+  },
+  {
+   "t": {
+    "en": "Teach",
+    "hi": "सिखाना"
+   },
+   "d": {
+    "en": "Study support, books and skills, so that no child leaves school only because of money.",
+    "hi": "पढ़ाई में सहयोग, किताबें और कौशल, ताकि कोई बच्चा केवल पैसों की कमी से स्कूल न छोड़े।"
+   }
+  },
+  {
+   "t": {
+    "en": "Care",
+    "hi": "देखभाल"
+   },
+   "d": {
+    "en": "Food, health help and warm clothing, so that children and families in need are not left alone.",
+    "hi": "भोजन, स्वास्थ्य सहायता और गर्म कपड़े, ताकि जरूरतमंद बच्चे और परिवार अकेले न रहें।"
+   }
+  },
+  {
+   "t": {
+    "en": "Follow through",
+    "hi": "साथ निभाना"
+   },
+   "d": {
+    "en": "Regular drives and follow-ups, done with full commitment, so support continues and progress is seen.",
+    "hi": "पूरी निष्ठा से नियमित अभियान और फॉलो-अप, ताकि सहयोग जारी रहे और प्रगति दिखे।"
+   }
+  }
+ ],
+ "stats": [
+  {
+   "big": "51.9%",
+   "d": {
+    "en": "of students are retained through the secondary stage, against 98.5% at the foundational stage.",
+    "hi": "विद्यार्थी माध्यमिक स्तर तक टिक पाते हैं, जबकि बुनियादी स्तर पर यह 98.5% है।"
+   },
+   "src": {
+    "en": "UDISE+ 2025-26, via BW Education",
+    "hi": "UDISE+ 2025-26, बीडब्ल्यू एजुकेशन के माध्यम से"
+   },
+   "url": "https://www.bweducation.com/article/india-s-school-enrolment-reaches-24-72-crore-secondary-retention-stands-at-51-9-631000"
+  },
+  {
+   "big": "59",
+   "d": {
+    "en": "girls for every 100 boys complete Class 11 and 12 in rural India.",
+    "hi": "लड़कियाँ प्रति 100 लड़कों पर ग्रामीण भारत में कक्षा 11 और 12 पूरी कर पाती हैं।"
+   },
+   "src": {
+    "en": "UNESCO, via ThePrint",
+    "hi": "यूनेस्को, दप्रिंट के माध्यम से"
+   },
+   "url": "https://theprint.in/india/education/only-59-girls-for-every-100-boys-complete-their-class-1112-schooling-in-rural-india-unesco-report/3066613/"
+  },
+  {
+   "big": "7%",
+   "d": {
+    "en": "is the dropout rate at the secondary stage, the highest of any school stage.",
+    "hi": "माध्यमिक स्तर पर ड्रॉपआउट दर है, जो स्कूली शिक्षा के सभी चरणों में सबसे अधिक है।"
+   },
+   "src": {
+    "en": "UDISE+ 2025-26, via BW Education",
+    "hi": "UDISE+ 2025-26, बीडब्ल्यू एजुकेशन के माध्यम से"
+   },
+   "url": "https://www.bweducation.com/article/india-s-school-enrolment-reaches-24-72-crore-secondary-retention-stands-at-51-9-631000"
+  }
+ ],
+ "focus": [
+  {
+   "key": "edu",
+   "cause": "education",
+   "photo": "photo-1692269726066-5be200e3a81d",
+   "tag": {
+    "en": "Education",
+    "hi": "शिक्षा"
+   },
+   "t": {
+    "en": "Education",
+    "hi": "शिक्षा का प्रसार"
+   },
+   "d": {
+    "en": "Support for the education, study material and bright future of poor and needy children.",
+    "hi": "गरीब और जरूरतमंद बच्चों की शिक्षा, अध्ययन सामग्री और उनके उज्ज्वल भविष्य के लिए सहयोग।"
+   },
+   "helps": [
+    {
+     "en": "Children's education support",
+     "hi": "बच्चों की शिक्षा सहायता"
+    },
+    {
+     "en": "Studies, stationery and books",
+     "hi": "पढ़ाई, स्टेशनरी और किताबें"
+    },
+    {
+     "en": "Educational needs of poor children",
+     "hi": "गरीब बच्चों की शैक्षणिक जरूरतें"
+    }
+   ]
+  },
+  {
+   "key": "health",
+   "cause": "health",
+   "photo": "photo-1739956802238-2f37aefec7e1",
+   "tag": {
+    "en": "Health",
+    "hi": "स्वास्थ्य"
+   },
+   "t": {
+    "en": "Health & Safety",
+    "hi": "स्वास्थ्य एवं सुरक्षा"
+   },
+   "d": {
+    "en": "Food, medical help and health awareness for people and families in need.",
+    "hi": "जरूरतमंद लोगों और परिवारों के लिए भोजन, चिकित्सा सहायता और स्वास्थ्य जागरूकता।"
+   },
+   "helps": [
+    {
+     "en": "Medical assistance",
+     "hi": "चिकित्सा सहायता"
+    },
+    {
+     "en": "Ration and food distribution",
+     "hi": "राशन एवं भोजन वितरण"
+    },
+    {
+     "en": "Health awareness camps",
+     "hi": "स्वास्थ्य जागरूकता शिविर"
+    }
+   ]
+  },
+  {
+   "key": "skill",
+   "cause": "skills",
+   "photo": "photo-1764114909312-c27b89ec7223",
+   "tag": {
+    "en": "Skills",
+    "hi": "कौशल"
+   },
+   "t": {
+    "en": "Skill Development",
+    "hi": "कौशल विकास"
+   },
+   "d": {
+    "en": "Skills and self-reliance, so that people can stand on their own feet with dignity.",
+    "hi": "कौशल और आत्मनिर्भरता, ताकि लोग सम्मान के साथ अपने पैरों पर खड़े हो सकें।"
+   },
+   "helps": [
+    {
+     "en": "Computer and digital training",
+     "hi": "कंप्यूटर एवं डिजिटल प्रशिक्षण"
+    },
+    {
+     "en": "Women's skills and employment (sewing, handicraft)",
+     "hi": "महिला कौशल एवं रोजगार (सिलाई, हस्तकला)"
+    },
+    {
+     "en": "Connecting youth to job opportunities",
+     "hi": "युवाओं को रोजगार के अवसरों से जोड़ना"
+    }
+   ]
+  },
+  {
+   "key": "welfare",
+   "cause": "welfare",
+   "photo": "photo-1610093435813-526af1b3fe11",
+   "tag": {
+    "en": "Child Welfare",
+    "hi": "बाल संरक्षण"
+   },
+   "t": {
+    "en": "Child Welfare",
+    "hi": "बाल संरक्षण एवं संवर्धन"
+   },
+   "d": {
+    "en": "Working for children's welfare, dignity and safe surroundings, so that no childhood is lost to want.",
+    "hi": "बच्चों के हित, सम्मान और सुरक्षित वातावरण के लिए प्रयास, ताकि कोई बचपन अभाव में न खो जाए।"
+   },
+   "helps": [
+    {
+     "en": "Child-rights awareness",
+     "hi": "बाल अधिकार जागरूकता"
+    },
+    {
+     "en": "Counselling support",
+     "hi": "परामर्श सहयोग"
+    },
+    {
+     "en": "Linking families to services",
+     "hi": "परिवारों को सेवाओं से जोड़ना"
+    }
+   ]
+  },
+  {
+   "key": "community",
+   "cause": "community",
+   "photo": "photo-1634351356743-05de62a4b80b",
+   "tag": {
+    "en": "Community",
+    "hi": "समुदाय"
+   },
+   "t": {
+    "en": "Community Support",
+    "hi": "सामाजिक सहयोग"
+   },
+   "d": {
+    "en": "Daughters' weddings, helpless elderly people, winter blankets and other welfare for families in need.",
+    "hi": "बेटियों के विवाह, असहाय बुजुर्ग, सर्दी में कंबल और जरूरतमंद परिवारों के लिए अन्य कल्याण कार्य।"
+   },
+   "helps": [
+    {
+     "en": "Marriage support for girls from poor families",
+     "hi": "गरीब कन्या विवाह सहायता"
+    },
+    {
+     "en": "Support for the elderly and helpless",
+     "hi": "वृद्ध एवं असहाय सहायता"
+    },
+    {
+     "en": "Blanket distribution drive",
+     "hi": "कंबल वितरण अभियान"
+    },
+    {
+     "en": "Emergency family relief",
+     "hi": "आपातकालीन परिवार सहायता"
+    }
+   ]
+  }
+ ],
+ "drives": [
+  {
+   "id": "d-up1",
+   "date": "2026-12-06",
+   "tag": "welfare",
+   "photo": "photo-1758390286125-bd31d5c8f592",
+   "t": {
+    "en": "Winter Clothes and Blanket Drive",
+    "hi": "सर्दी के कपड़े और कंबल अभियान"
+   },
+   "place": {
+    "en": "Faridabad, Haryana",
+    "hi": "फरीदाबाद, हरियाणा"
+   },
+   "time": {
+    "en": "10:00 AM onwards",
+    "hi": "सुबह 10:00 बजे से"
+   },
+   "d": {
+    "en": "Warm clothes and blankets for children and families ahead of the cold months.",
+    "hi": "ठंड से पहले बच्चों और परिवारों के लिए गर्म कपड़े और कंबल।"
+   },
+   "result": {
+    "en": "",
+    "hi": ""
+   }
+  },
+  {
+   "id": "d-up2",
+   "date": "2026-12-20",
+   "tag": "health",
+   "photo": "photo-1632661765830-aa47ee0765c4",
+   "t": {
+    "en": "Free Health Check-up and Hygiene Camp",
+    "hi": "निःशुल्क स्वास्थ्य जाँच एवं स्वच्छता शिविर"
+   },
+   "place": {
+    "en": "Palwal, Haryana",
+    "hi": "पलवल, हरियाणा"
+   },
+   "time": {
+    "en": "9:30 AM to 2:00 PM",
+    "hi": "सुबह 9:30 से दोपहर 2:00 बजे"
+   },
+   "d": {
+    "en": "Basic check-ups, hygiene kits and nutrition advice for children and parents.",
+    "hi": "बच्चों और अभिभावकों के लिए बुनियादी जाँच, स्वच्छता किट और पोषण सलाह।"
+   },
+   "result": {
+    "en": "",
+    "hi": ""
+   }
+  },
+  {
+   "id": "d-up3",
+   "date": "2027-01-10",
+   "tag": "skill",
+   "photo": "photo-1722573783625-eceb04251036",
+   "t": {
+    "en": "Computer Basics and Spoken English Workshop",
+    "hi": "कंप्यूटर बेसिक्स व स्पोकन इंग्लिश कार्यशाला"
+   },
+   "place": {
+    "en": "Faridabad, Haryana",
+    "hi": "फरीदाबाद, हरियाणा"
+   },
+   "time": {
+    "en": "11:00 AM to 4:00 PM",
+    "hi": "सुबह 11:00 से शाम 4:00 बजे"
+   },
+   "d": {
+    "en": "A hands-on day of practical skills for teenagers and young adults.",
+    "hi": "किशोरों और युवाओं के लिए व्यावहारिक कौशल का एक दिन।"
+   },
+   "result": {
+    "en": "",
+    "hi": ""
+   }
+  },
+  {
+   "id": "d-up4",
+   "date": "2027-01-26",
+   "tag": "community",
+   "photo": "photo-1635733631349-f9528ac28c36",
+   "t": {
+    "en": "Republic Day Children's Celebration",
+    "hi": "गणतंत्र दिवस बाल उत्सव"
+   },
+   "place": {
+    "en": "Faridabad, Haryana",
+    "hi": "फरीदाबाद, हरियाणा"
+   },
+   "time": {
+    "en": "9:00 AM onwards",
+    "hi": "सुबह 9:00 बजे से"
+   },
+   "d": {
+    "en": "Games, stories and flag hoisting with the children and families we work with.",
+    "hi": "हमारे साथ जुड़े बच्चों और परिवारों के साथ खेल, कहानियाँ और ध्वजारोहण।"
+   },
+   "result": {
+    "en": "",
+    "hi": ""
+   }
+  },
+  {
+   "id": "d-pa1",
+   "date": "2026-10-18",
+   "tag": "edu",
+   "photo": "photo-1719159381916-062fa9f435a6",
+   "t": {
+    "en": "Back-to-School Kit Drive",
+    "hi": "स्कूल वापसी किट अभियान"
+   },
+   "place": {
+    "en": "Faridabad, Haryana",
+    "hi": "फरीदाबाद, हरियाणा"
+   },
+   "time": {
+    "en": "",
+    "hi": ""
+   },
+   "d": {
+    "en": "Bags, books and stationery for children starting the new term.",
+    "hi": "नया सत्र शुरू करने वाले बच्चों के लिए बैग, किताबें और स्टेशनरी।"
+   },
+   "result": {
+    "en": "About 150 children received kits",
+    "hi": "लगभग 150 बच्चों को किट मिली"
+   }
+  },
+  {
+   "id": "d-pa2",
+   "date": "2026-09-27",
+   "tag": "health",
+   "photo": "photo-1631506317240-eac1596c87a6",
+   "t": {
+    "en": "Health and Hygiene Awareness Camp",
+    "hi": "स्वास्थ्य एवं स्वच्छता जागरूकता शिविर"
+   },
+   "place": {
+    "en": "Faridabad, Haryana",
+    "hi": "फरीदाबाद, हरियाणा"
+   },
+   "time": {
+    "en": "",
+    "hi": ""
+   },
+   "d": {
+    "en": "Sessions on handwashing, nutrition and safety, with simple check-ups.",
+    "hi": "हाथ धोने, पोषण और सुरक्षा पर सत्र, साथ में सरल जाँच।"
+   },
+   "result": {
+    "en": "About 120 children and parents joined",
+    "hi": "लगभग 120 बच्चे और अभिभावक जुड़े"
+   }
+  },
+  {
+   "id": "d-pa3",
+   "date": "2026-08-30",
+   "tag": "skill",
+   "photo": "photo-1616674202799-054e7c831378",
+   "t": {
+    "en": "Tailoring and Skills Workshop",
+    "hi": "सिलाई एवं कौशल कार्यशाला"
+   },
+   "place": {
+    "en": "Palwal, Haryana",
+    "hi": "पलवल, हरियाणा"
+   },
+   "time": {
+    "en": "",
+    "hi": ""
+   },
+   "d": {
+    "en": "Women and older girls learned stitching basics from a trained instructor.",
+    "hi": "महिलाओं और बड़ी लड़कियों ने प्रशिक्षित प्रशिक्षक से सिलाई की मूल बातें सीखीं।"
+   },
+   "result": {
+    "en": "25 participants trained",
+    "hi": "25 प्रतिभागियों को प्रशिक्षण"
+   }
+  },
+  {
+   "id": "d-pa4",
+   "date": "2026-07-12",
+   "tag": "welfare",
+   "photo": "photo-1622831877966-18a6c8731a01",
+   "t": {
+    "en": "Child Rights Awareness Walk",
+    "hi": "बाल अधिकार जागरूकता रैली"
+   },
+   "place": {
+    "en": "Faridabad, Haryana",
+    "hi": "फरीदाबाद, हरियाणा"
+   },
+   "time": {
+    "en": "",
+    "hi": ""
+   },
+   "d": {
+    "en": "Children, parents and volunteers walked together to spread awareness.",
+    "hi": "बच्चों, अभिभावकों और स्वयंसेवकों ने जागरूकता फैलाने के लिए साथ मार्च किया।"
+   },
+   "result": {
+    "en": "80 children and volunteers took part",
+    "hi": "80 बच्चे और स्वयंसेवक शामिल हुए"
+   }
+  },
+  {
+   "id": "d-pa5",
+   "date": "2026-06-20",
+   "tag": "edu",
+   "photo": "photo-1692269725980-495f94b9d7a4",
+   "t": {
+    "en": "Reading Circle Launch",
+    "hi": "पठन मंडली की शुरुआत"
+   },
+   "place": {
+    "en": "Gurugram, Haryana",
+    "hi": "गुरुग्राम, हरियाणा"
+   },
+   "time": {
+    "en": "",
+    "hi": ""
+   },
+   "d": {
+    "en": "A weekly reading circle began, with story books for every child.",
+    "hi": "साप्ताहिक पठन मंडली शुरू हुई, हर बच्चे के लिए कहानी की किताबों के साथ।"
+   },
+   "result": {
+    "en": "30 children enrolled",
+    "hi": "30 बच्चे जुड़े"
+   }
+  },
+  {
+   "id": "d-pa6",
+   "date": "2026-05-09",
+   "tag": "community",
+   "photo": "photo-1739283487660-731830a1878a",
+   "t": {
+    "en": "Parents and Volunteers Meet",
+    "hi": "अभिभावक एवं स्वयंसेवक मिलन"
+   },
+   "place": {
+    "en": "Faridabad, Haryana",
+    "hi": "फरीदाबाद, हरियाणा"
+   },
+   "time": {
+    "en": "",
+    "hi": ""
+   },
+   "d": {
+    "en": "A meeting to share plans, listen to families and welcome new volunteers.",
+    "hi": "योजनाएँ साझा करने, परिवारों को सुनने और नए स्वयंसेवकों के स्वागत के लिए बैठक।"
+   },
+   "result": {
+    "en": "40 families attended",
+    "hi": "40 परिवार शामिल हुए"
+   }
+  }
+ ],
+ "news": [
+  {
+   "id": "n1",
+   "cat": "skills",
+   "photo": "photo-1707721690544-781fe6ede937",
+   "date": "2026-11-20",
+   "source": {
+    "en": "Frontline",
+    "hi": "फ्रंटलाइन"
+   },
+   "t": {
+    "en": "Female literacy has soared, but jobs have not followed",
+    "hi": "महिला साक्षरता बढ़ी, पर रोज़गार उसी अनुपात में नहीं बढ़ा"
+   },
+   "d": {
+    "en": "Female literacy rose from under 9% in 1951 to about 65% in 2011, yet state data show little link with women's participation in the workforce. Schooling works best when skills and opportunity come with it.",
+    "hi": "महिला साक्षरता 1951 में 9% से कम से बढ़कर 2011 में लगभग 65% हो गई, पर राज्यों के आँकड़ों में इसका महिलाओं की कार्यबल में भागीदारी से बहुत कम संबंध दिखता है। स्कूली शिक्षा के साथ कौशल और अवसर भी ज़रूरी हैं।"
+   },
+   "url": "https://frontline.thehindu.com/the-nation/female-literacy-labour-force-participation-women-employment/article71719862.ece"
+  },
+  {
+   "id": "n2",
+   "cat": "health",
+   "photo": "photo-1692269725911-87697c558be1",
+   "date": "2026-11-19",
+   "source": {
+    "en": "The Conversation",
+    "hi": "द कन्वर्सेशन"
+   },
+   "t": {
+    "en": "Why families say yes, or no, to free school meals",
+    "hi": "मुफ़्त स्कूली भोजन पर परिवार हाँ या ना क्यों कहते हैं"
+   },
+   "d": {
+    "en": "Researchers spoke with 86 households in Uttar Pradesh and Goa about the PM Poshan meal scheme, which reaches about 112 million children. Dignity, aspiration and daily pressures shape whether a free meal is accepted.",
+    "hi": "शोधकर्ताओं ने उत्तर प्रदेश और गोवा के 86 परिवारों से पीएम पोषण योजना के बारे में बात की, जो लगभग 11.2 करोड़ बच्चों तक पहुँचती है। सम्मान, आकांक्षा और रोज़मर्रा के दबाव तय करते हैं कि मुफ़्त भोजन अपनाया जाए या नहीं।"
+   },
+   "url": "https://theconversation.com/three-decades-of-free-school-meals-in-india-dignity-aspiration-and-the-social-meaning-of-food-295715"
+  },
+  {
+   "id": "n3",
+   "cat": "health",
+   "photo": "photo-1635247054993-3346afdfd31e",
+   "date": "2026-11-10",
+   "source": {
+    "en": "Deccan Herald",
+    "hi": "डेक्कन हेराल्ड"
+   },
+   "t": {
+    "en": "Children need to be healthy enough to learn",
+    "hi": "सीखने के लिए बच्चों का स्वस्थ होना ज़रूरी"
+   },
+   "d": {
+    "en": "A study of Karnataka's child budgets found most spending goes to education while about 35% of children under five are stunted. It urges more investment in nutrition so that children can learn and thrive.",
+    "hi": "कर्नाटक के बाल बजट के एक अध्ययन में पाया गया कि अधिकांश खर्च शिक्षा पर होता है, जबकि पाँच वर्ष से कम के लगभग 35% बच्चे बौनेपन से प्रभावित हैं। अध्ययन पोषण में अधिक निवेश की सलाह देता है।"
+   },
+   "url": "https://www.deccanherald.com/india/karnataka/are-karnatakas-children-healthy-enough-for-school-study-flags-nutrition-crisis-even-as-state-invests-in-education-4213158"
+  },
+  {
+   "id": "n4",
+   "cat": "skills",
+   "photo": "photo-1686624386665-4cd01b96d0f6",
+   "date": "2026-11-02",
+   "source": {
+    "en": "PIB, Government of India",
+    "hi": "पीआईबी, भारत सरकार"
+   },
+   "t": {
+    "en": "19 institutions recognised as skilling Centres of Excellence",
+    "hi": "19 संस्थान कौशल उत्कृष्टता केंद्र के रूप में मान्य"
+   },
+   "d": {
+    "en": "The Ministry of Skill Development and Entrepreneurship recognised 19 institutions as Centres of Excellence-Skills, meant to be permanent, advanced and industry-aligned training centres.",
+    "hi": "कौशल विकास एवं उद्यमिता मंत्रालय ने 19 संस्थानों को कौशल उत्कृष्टता केंद्र के रूप में मान्यता दी, जिनका उद्देश्य स्थायी, उन्नत और उद्योग-अनुरूप प्रशिक्षण केंद्र बनना है।"
+   },
+   "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2331775&reg=48&lang=2"
+  },
+  {
+   "id": "n5",
+   "cat": "schooling",
+   "photo": "photo-1709290749293-c6152a187b14",
+   "date": "2026-10-29",
+   "source": {
+    "en": "BW Education",
+    "hi": "बीडब्ल्यू एजुकेशन"
+   },
+   "t": {
+    "en": "Enrolment is high, but secondary retention lags",
+    "hi": "दाखिले अधिक, पर माध्यमिक स्तर पर बच्चे कम टिक पाते हैं"
+   },
+   "d": {
+    "en": "The UDISE+ 2025-26 report records 24.72 crore enrolments in about 14.67 lakh schools, yet retention at the secondary stage is 51.9%, against 98.5% at the foundational stage.",
+    "hi": "UDISE+ 2025-26 रिपोर्ट में लगभग 14.67 लाख स्कूलों में 24.72 करोड़ दाखिले दर्ज हुए, पर माध्यमिक स्तर पर प्रतिधारण 51.9% है, जबकि बुनियादी स्तर पर 98.5%।"
+   },
+   "url": "https://www.bweducation.com/article/india-s-school-enrolment-reaches-24-72-crore-secondary-retention-stands-at-51-9-631000"
+  },
+  {
+   "id": "n6",
+   "cat": "schooling",
+   "photo": "photo-1572847748080-bac263fae977",
+   "date": "2026-10-09",
+   "source": {
+    "en": "ThePrint",
+    "hi": "दप्रिंट"
+   },
+   "t": {
+    "en": "In rural India, far fewer girls finish Class 12",
+    "hi": "ग्रामीण भारत में बहुत कम लड़कियाँ कक्षा 12 पूरी कर पाती हैं"
+   },
+   "d": {
+    "en": "A UNESCO report puts India's gender parity in upper-secondary completion at 0.59 in rural areas and 1.0 in urban areas, and says poverty widens the gap.",
+    "hi": "यूनेस्को की रिपोर्ट के अनुसार उच्च माध्यमिक पूर्णता में लैंगिक समानता सूचकांक ग्रामीण क्षेत्रों में 0.59 और शहरी क्षेत्रों में 1.0 है, और गरीबी इस अंतर को बढ़ाती है।"
+   },
+   "url": "https://theprint.in/india/education/only-59-girls-for-every-100-boys-complete-their-class-1112-schooling-in-rural-india-unesco-report/3066613/"
+  }
+ ],
+ "newsCats": [
+  {
+   "key": "schooling",
+   "t": {
+    "en": "Schooling",
+    "hi": "स्कूली शिक्षा"
+   }
+  },
+  {
+   "key": "skills",
+   "t": {
+    "en": "Skills",
+    "hi": "कौशल"
+   }
+  },
+  {
+   "key": "health",
+   "t": {
+    "en": "Health & nutrition",
+    "hi": "स्वास्थ्य व पोषण"
+   }
+  }
+ ],
+ "team": [
+  {
+   "name": {
+    "en": "Shri Subodh Kumar",
+    "hi": "श्री सुबोध कुमार"
+   },
+   "role": {
+    "en": "Founder & President",
+    "hi": "संस्थापक एवं अध्यक्ष"
+   }
+  },
+  {
+   "name": {
+    "en": "[Secretary name]",
+    "hi": "[सचिव का नाम]"
+   },
+   "role": {
+    "en": "Secretary",
+    "hi": "सचिव"
+   }
+  },
+  {
+   "name": {
+    "en": "[Treasurer name]",
+    "hi": "[कोषाध्यक्ष का नाम]"
+   },
+   "role": {
+    "en": "Treasurer",
+    "hi": "कोषाध्यक्ष"
+   }
+  }
+ ],
+ "values": [
+  {
+   "t": {
+    "en": "Seva",
+    "hi": "सेवा"
+   },
+   "d": {
+    "en": "Helping people in need and the helpless, without any discrimination.",
+    "hi": "बिना किसी भेदभाव के जरूरतमंद और असहाय लोगों की सहायता करना।"
+   }
+  },
+  {
+   "t": {
+    "en": "Sahyog",
+    "hi": "सहयोग"
+   },
+   "d": {
+    "en": "Standing with weak and needy families in education, health, food and social needs.",
+    "hi": "शिक्षा, स्वास्थ्य, भोजन और सामाजिक आवश्यकताओं में कमजोर एवं जरूरतमंद परिवारों का साथ देना।"
+   }
+  },
+  {
+   "t": {
+    "en": "Samarpan",
+    "hi": "समर्पण"
+   },
+   "d": {
+    "en": "Working with full commitment for the upliftment of society, children's bright future and human values.",
+    "hi": "समाज के उत्थान, बच्चों के उज्ज्वल भविष्य और मानवीय मूल्यों के प्रति पूरी निष्ठा से कार्य करना।"
+   }
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "en": "Is my donation tax-exempt?",
+    "hi": "क्या मेरा दान कर-मुक्त है?"
+   },
+   "a": {
+    "en": "Tax benefits (such as 80G) apply only when the trust holds a valid certificate. We will update this page and your receipt as soon as it is available.",
+    "hi": "कर लाभ (जैसे 80G) तभी लागू होते हैं जब संस्था के पास वैध प्रमाणपत्र हो। उपलब्ध होते ही यह पृष्ठ और आपकी रसीद अपडेट की जाएगी।"
+   }
+  },
+  {
+   "q": {
+    "en": "Can I stop my monthly donation?",
+    "hi": "क्या मैं मासिक दान बंद कर सकता हूँ?"
+   },
+   "a": {
+    "en": "Yes. Contact us on WhatsApp or the contact form and we will help you pause or cancel. You can also revoke the UPI AutoPay mandate from your UPI app.",
+    "hi": "हाँ। WhatsApp या संपर्क फॉर्म से बताएँ, हम रोकने या बंद करने में मदद करेंगे। आप अपने UPI ऐप से भी AutoPay रद्द कर सकते हैं।"
+   }
+  },
+  {
+   "q": {
+    "en": "Can I donate from outside India?",
+    "hi": "क्या भारत के बाहर से दान दे सकते हैं?"
+   },
+   "a": {
+    "en": "Foreign contributions are accepted only after the required FCRA registration or permission is obtained.",
+    "hi": "विदेशी योगदान केवल आवश्यक FCRA पंजीकरण या अनुमति मिलने के बाद ही स्वीकार किए जाएँगे।"
+   }
+  }
+ ],
+ "texts": {},
+ "causes": [
+  {
+   "key": "marriage",
+   "photo": "photo-1634351356743-05de62a4b80b",
+   "t": {
+    "en": "Girls' Marriage Support",
+    "hi": "गरीब कन्या विवाह सहायता"
+   },
+   "d": {
+    "en": "Help a daughter from a needy family begin married life with dignity.",
+    "hi": "जरूरतमंद परिवार की बेटी के विवाह में सहयोग कर उसे सम्मान के साथ नए जीवन की शुरुआत में मदद करें।"
+   },
+   "amounts": [],
+   "fund": {
+    "on": false,
+    "goal": 0,
+    "raised": 0,
+    "note": {
+     "en": "",
+     "hi": ""
+    }
+   }
+  },
+  {
+   "key": "elderly",
+   "photo": "photo-1609252509229-364936a1d1a2",
+   "t": {
+    "en": "Elderly & Helpless Support",
+    "hi": "वृद्ध एवं असहाय सहायता"
+   },
+   "d": {
+    "en": "Care and basic support for elderly and helpless people with no one to turn to.",
+    "hi": "जिनका कोई सहारा नहीं, ऐसे वृद्ध एवं असहाय लोगों के लिए देखभाल और बुनियादी सहायता।"
+   },
+   "amounts": [],
+   "fund": {
+    "on": false,
+    "goal": 0,
+    "raised": 0,
+    "note": {
+     "en": "",
+     "hi": ""
+    }
+   }
+  },
+  {
+   "key": "blankets",
+   "photo": "photo-1758390286125-bd31d5c8f592",
+   "t": {
+    "en": "Blanket Distribution Drive",
+    "hi": "कंबल वितरण अभियान"
+   },
+   "d": {
+    "en": "Warm blankets for people who face the winter cold without proper cover.",
+    "hi": "सर्दी की ठंड में बिना उचित ओढ़ने-बिछाने के रहने वाले लोगों के लिए गर्म कंबल।"
+   },
+   "amounts": [],
+   "fund": {
+    "on": false,
+    "goal": 0,
+    "raised": 0,
+    "note": {
+     "en": "",
+     "hi": ""
+    }
+   }
+  },
+  {
+   "key": "education",
+   "photo": "photo-1692269726066-5be200e3a81d",
+   "t": {
+    "en": "Children's Education Support",
+    "hi": "बच्चों की शिक्षा सहायता"
+   },
+   "d": {
+    "en": "Fees, books and stationery so that a child can keep studying.",
+    "hi": "फीस, किताबें और स्टेशनरी, ताकि बच्चे की पढ़ाई जारी रह सके।"
+   },
+   "amounts": [],
+   "fund": {
+    "on": false,
+    "goal": 0,
+    "raised": 0,
+    "note": {
+     "en": "",
+     "hi": ""
+    }
+   }
+  },
+  {
+   "key": "ration",
+   "photo": "photo-1610093435813-526af1b3fe11",
+   "t": {
+    "en": "Ration & Food Distribution",
+    "hi": "राशन एवं भोजन वितरण"
+   },
+   "d": {
+    "en": "Ration and meals for families who struggle to get enough food.",
+    "hi": "जिन परिवारों को भरपेट भोजन जुटाना कठिन है, उनके लिए राशन और भोजन।"
+   },
+   "amounts": [],
+   "fund": {
+    "on": false,
+    "goal": 0,
+    "raised": 0,
+    "note": {
+     "en": "",
+     "hi": ""
+    }
+   }
+  },
+  {
+   "key": "medical",
+   "photo": "photo-1739956802238-2f37aefec7e1",
+   "t": {
+    "en": "Medical Support",
+    "hi": "चिकित्सा सहायता"
+   },
+   "d": {
+    "en": "Help with treatment, medicines and health camps for those who cannot afford them.",
+    "hi": "जो इलाज का खर्च नहीं उठा सकते, उनके लिए उपचार, दवाइयाँ और स्वास्थ्य शिविरों में सहयोग।"
+   },
+   "amounts": [],
+   "fund": {
+    "on": false,
+    "goal": 0,
+    "raised": 0,
+    "note": {
+     "en": "",
+     "hi": ""
+    }
+   }
+  },
+  {
+   "key": "computer",
+   "photo": "photo-1629306262232-1f854b4b0b13",
+   "t": {
+    "en": "Computer & Digital Training",
+    "hi": "कंप्यूटर एवं डिजिटल प्रशिक्षण"
+   },
+   "d": {
+    "en": "Computer and digital skills training for young people.",
+    "hi": "युवाओं के लिए कंप्यूटर एवं डिजिटल कौशल का प्रशिक्षण।"
+   },
+   "amounts": [],
+   "fund": {
+    "on": false,
+    "goal": 0,
+    "raised": 0,
+    "note": {
+     "en": "",
+     "hi": ""
+    }
+   }
+  },
+  {
+   "key": "women",
+   "photo": "photo-1616674202799-054e7c831378",
+   "t": {
+    "en": "Women's Skills & Employment",
+    "hi": "महिला कौशल एवं रोजगार"
+   },
+   "d": {
+    "en": "Sewing, handicraft and other skills that help women earn.",
+    "hi": "सिलाई, हस्तकला और अन्य कौशल, जो महिलाओं को आय कमाने में मदद करें।"
+   },
+   "amounts": [],
+   "fund": {
+    "on": false,
+    "goal": 0,
+    "raised": 0,
+    "note": {
+     "en": "",
+     "hi": ""
+    }
+   }
+  },
+  {
+   "key": "emergency",
+   "photo": "photo-1632661765830-aa47ee0765c4",
+   "t": {
+    "en": "Emergency Family Aid",
+    "hi": "आपातकालीन परिवार सहायता"
+   },
+   "d": {
+    "en": "Quick help for a family hit by a sudden crisis.",
+    "hi": "अचानक संकट में घिरे परिवार को तुरंत सहायता।"
+   },
+   "amounts": [],
+   "fund": {
+    "on": false,
+    "goal": 0,
+    "raised": 0,
+    "note": {
+     "en": "",
+     "hi": ""
+    }
+   }
+  }
+ ]
+}
