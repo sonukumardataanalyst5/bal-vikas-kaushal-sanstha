@@ -30,8 +30,8 @@ window.BVKS = {
   has80G: false,                                 // flip to true only when 80G certificate is held
   hasFCRA: false,
 
-  // ---- Bank transfer (TODO real details) ----
-  bank: { holder: "Bal Vikas Kaushal Sanstha", account: "", ifsc: "", bankName: "", upi: "", upiName: "" },
+  // ---- Bank transfer / UPI (PhonePe test setup) ----
+  bank: { holder: "Bal Vikas Kaushal Sanstha", account: "", ifsc: "", bankName: "", upi: "8506945362@ybl", upiName: "Bal Vikas Kaushal Sanstha", phonepe: "8506945362" },
 
   social: { facebook: "", instagram: "", youtube: "" }
 };

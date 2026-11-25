@@ -14,15 +14,15 @@
     if (i === 0) FIRST = r.value;
   });
   var TIERS = [].map.call(form.querySelectorAll('input[name=tier]'), function (r) { return +r.value; });
-  var state = { freq: 'monthly', cause: '', amt: TIERS[0] || C.monthlyAmount || 100 };
+  var state = { freq: 'once', cause: '', amt: 0 };
   var lastOnce = 0;
 
   // starting point from the link (home cards link here with ?cause=&freq=&amt=)
-  if (qp.get('freq') === 'once' || qp.get('freq') === 'monthly') state.freq = qp.get('freq'); else if (qp.get('cause')) state.freq = 'once';
+  if (qp.get('freq') === 'once' || qp.get('freq') === 'monthly') state.freq = qp.get('freq');
   if (CAUSES[qp.get('cause')]) state.cause = qp.get('cause');
   else if (location.hash !== '#choose' && CAUSES.general) state.cause = 'general';   // simplest path: start on "where it is needed most"; the donor can tap Change
   var qa = parseInt(qp.get('amt'), 10);
-  if (state.freq === 'monthly') state.amt = TIERS.indexOf(qa) > -1 ? qa : (TIERS[0] || state.amt);
+  if (state.freq === 'monthly') state.amt = TIERS.indexOf(qa) > -1 ? qa : (TIERS[0] || C.monthlyAmount || 100);
   else { lastOnce = qa >= MINONCE && qa <= MAXAMT ? qa : 0; state.amt = lastOnce || 0; }
 
   var chipBox = $('#amtChips'), custom = $('#customAmt');
@@ -58,10 +58,12 @@
     var box = $('#upiBox'), show = state.freq === 'once' && !!upiId && (!!(C.bank && C.bank.upi) || sample);
     box.style.display = show ? 'block' : 'none'; if (!show) return;
     $('#upiId').textContent = sample ? 'yourtrust@bank' : upiId; $('#upiSample').style.display = sample ? 'block' : 'none';
-    var ok = state.amt >= MINONCE && state.amt <= MAXAMT, link = upiLink(), a = $('#upiApp');
-    box.classList.toggle('noamt', !ok);
-    if (ok) drawQr(link); else $('#upiQr').innerHTML = '<span class="qr-wait">' + (L() === 'hi' ? 'पहले राशि चुनें' : 'Choose an amount first') + '</span>';
-    a.href = sample || !ok ? '#' : link; a.setAttribute('aria-disabled', sample || !ok ? 'true' : 'false');
+    var ppRow = $('#phonepeRow'), ppNo = (C.bank && C.bank.phonepe) || '';
+    if (ppRow) { ppRow.style.display = (!sample && ppNo) ? '' : 'none'; if (ppNo) $('#phonepeNo').textContent = ppNo; }
+    var amtValid = state.amt >= MINONCE && state.amt <= MAXAMT, canQr = !sample && (state.amt === 0 || amtValid), link = upiLink(), a = $('#upiApp');
+    box.classList.toggle('noamt', !canQr);
+    if (canQr) drawQr(link); else $('#upiQr').innerHTML = '<span class="qr-wait">' + (L() === 'hi' ? 'सही राशि चुनें' : 'Enter a valid amount') + '</span>';
+    a.href = !canQr ? '#' : link; a.setAttribute('aria-disabled', !canQr ? 'true' : 'false');
   }
 
   function altSync() {   // show the "UPI QR / bank transfer" fold only when it has something to show
@@ -98,10 +100,13 @@
   $('#causeChange').addEventListener('click', function () { showCause(false); grid.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); });
   form.querySelectorAll('input[name=tier]').forEach(function (r) { r.addEventListener('change', function () { state.amt = +r.value; sync(); }); });
   custom.addEventListener('input', function () { var v = parseInt(custom.value, 10); state.amt = lastOnce = v > 0 ? v : 0; chipBox.querySelectorAll('.chip').forEach(function (c) { c.classList.toggle('on', +c.dataset.amt === state.amt); }); sync(); });
-  $('#upiCopy').addEventListener('click', function () {
-    if (sample) return; var b = this, done = function () { var o = b.innerHTML; b.innerHTML = '✓'; setTimeout(function () { b.innerHTML = o; }, 1400); };
-    if (navigator.clipboard) navigator.clipboard.writeText(upiId).then(done, function () {}); else { var t = document.createElement('textarea'); t.value = upiId; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); done(); } catch (e) {} t.remove(); }
-  });
+  function copyBtn(btn, val) {
+    if (!btn || !val) return;
+    var done = function () { var o = btn.innerHTML; btn.innerHTML = '✓'; setTimeout(function () { btn.innerHTML = o; }, 1400); };
+    if (navigator.clipboard) navigator.clipboard.writeText(val).then(done, function () {}); else { var t = document.createElement('textarea'); t.value = val; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); done(); } catch (e) {} t.remove(); }
+  }
+  $('#upiCopy').addEventListener('click', function () { if (!sample) copyBtn(this, upiId); });
+  if ($('#phonepeCopy')) $('#phonepeCopy').addEventListener('click', function () { copyBtn(this, (C.bank && C.bank.phonepe) || ''); });
   $('#upiApp').addEventListener('click', function (e) { if (this.getAttribute('aria-disabled') === 'true') { e.preventDefault(); bvksToast(sample ? 'Preview only: the real UPI ID is not added yet.' : 'Please choose an amount first.', sample ? 'केवल प्रीव्यू: असली UPI आईडी अभी जोड़ी नहीं गई है।' : 'पहले राशि चुनें।'); } });
   sync(); showCause(!!state.cause);
   document.querySelectorAll('.lang button').forEach(function (b) { b.addEventListener('click', function () { setTimeout(sync, 0); }); });
