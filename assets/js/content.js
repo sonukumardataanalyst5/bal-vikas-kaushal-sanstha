@@ -23,12 +23,19 @@
 
   var D, S, ALT = {};
   var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#x27;' }[c]; }); };
+  var safeUrl = function (u, allowDataImg) {
+    u = String(u == null ? '' : u).trim();
+    if (!u) return '';
+    if (allowDataImg && /^data:image\/(png|jpe?g|webp|gif);base64,/i.test(u)) return u;
+    if (/^(https?:\/\/|[a-z0-9_./-]+\.(?:png|jpe?g|webp|gif|svg|html)(?:[?#].*)?$)/i.test(u)) return u;
+    return '';
+  };
   var pad = function (n) { return (n < 10 ? '0' : '') + n; };
   var TD = function (en, hi) { return '<span class="en">' + en + '</span><span class="hi" lang="hi">' + hi + '</span>'; };
   var TE = function (o) { o = o || {}; return TD(esc(o.en || o.hi), esc(o.hi || o.en)); };
   var has = function (o) { return !!(o && (o.en || o.hi)); };
   var inr = function (n) { return Number(n).toLocaleString('en-IN'); };
-  var photoUrl = function (ref, w) { return /^photo-/.test(ref) ? 'https://images.unsplash.com/' + ref + '?auto=format&fit=crop&w=' + w + '&q=75' : ref; };
+  var photoUrl = function (ref, w) { return /^photo-[a-zA-Z0-9_-]+$/.test(ref) ? 'https://images.unsplash.com/' + ref + '?auto=format&fit=crop&w=' + w + '&q=75' : safeUrl(ref, true); };
   function IMG(ref, alt, w, eager, pos) {
     if (!ref) return '';
     return '<img data-photo' + (pos ? ' style="object-position:' + esc(pos) + '"' : '') + ' src="' + esc(photoUrl(ref, w)) + '" alt="' + esc(ALT[ref] || alt) + '" ' + (eager ? '' : 'loading="lazy" ') + 'decoding="async">';
@@ -70,7 +77,7 @@
     stats: function (el) {
       el.innerHTML = (D.stats || []).map(function (x) {
         var src = '';
-        if (has(x.src)) { var nm = TE(x.src); src = '<small>' + TD('Source', 'स्रोत') + ': ' + (x.url ? '<a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + nm + '</a>' : nm) + '</small>'; }
+        if (has(x.src)) { var nm = TE(x.src), su = safeUrl(x.url); src = '<small>' + TD('Source', 'स्रोत') + ': ' + (su ? '<a href="' + esc(su) + '" target="_blank" rel="noopener noreferrer">' + nm + '</a>' : nm) + '</small>'; }
         return '<div class="stat"><b>' + esc(x.big) + '</b><div><p>' + TE(x.d) + '</p>' + src + '</div></div>';
       }).join('');
     },
@@ -101,7 +108,7 @@
       var list = (D.news || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
       var lim = +el.getAttribute('data-limit') || 0; if (lim) list = list.slice(0, lim);
       el.innerHTML = list.map(function (n) {
-        var y = ymd(n.date), link = n.url ? '<a class="go" href="' + esc(n.url) + '" target="_blank" rel="noopener">' + TD('Read at the source', 'मूल लेख पढ़ें') + EXT + '</a>' : '';
+        var y = ymd(n.date), nu = safeUrl(n.url), link = nu ? '<a class="go" href="' + esc(nu) + '" target="_blank" rel="noopener noreferrer">' + TD('Read at the source', 'मूल लेख पढ़ें') + EXT + '</a>' : '';
         return '<article class="news-card reveal" data-cat="' + esc(n.cat) + '"><div class="ph">' + IMG(n.photo, n.t.en, 700) + '</div><div class="nb"><div class="meta"><span>' + TE(n.source) + '</span><span class="sep">·</span><span>' + TD(y[2] + ' ' + MON_EN[y[1]] + ' ' + y[0], y[2] + ' ' + MON_HI[y[1]] + ' ' + y[0]) + '</span></div><h3>' + TE(n.t) + '</h3><p>' + TE(n.d) + '</p>' + link + '</div></article>';
       }).join('');
     },
@@ -112,7 +119,7 @@
     homechips: function (el) { el.innerHTML = S.homeChips.map(function (n) { return '<a href="donate.html?freq=once&amp;amt=' + n + '">₹' + inr(n) + '</a>'; }).join('') + '<a href="donate.html?freq=once">' + TD('Other', 'अन्य') + '</a>'; },
     social: function (el) {
       var so = S.social || {}, items = [['facebook', 'Facebook', ICON.fb], ['instagram', 'Instagram', ICON.ig], ['youtube', 'YouTube', ICON.yt]];
-      el.innerHTML = items.filter(function (x) { return so[x[0]]; }).map(function (x) { return '<a href="' + esc(so[x[0]]) + '" target="_blank" rel="noopener noreferrer" aria-label="' + x[1] + '">' + x[2] + '</a>'; }).join('');
+      el.innerHTML = items.filter(function (x) { return safeUrl(so[x[0]]); }).map(function (x) { return '<a href="' + esc(safeUrl(so[x[0]])) + '" target="_blank" rel="noopener noreferrer" aria-label="' + x[1] + '">' + x[2] + '</a>'; }).join('');
     }
   };
   var DEPS = { slides: ['slides'], how: ['how'], values: ['values'], team: ['team'], stats: ['stats'], faq: ['faq'], focus: ['focus'], ticker: ['focus'], causes: ['causes', 'settings'], causepick: ['causes', 'settings'], tiers: ['settings'], hometiers: ['settings'],

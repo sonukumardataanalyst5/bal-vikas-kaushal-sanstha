@@ -66,7 +66,7 @@
       .then(function (r) { if (!r.ok) throw 0; cf.reset(); bvksToast('Thank you! We will reply soon.', 'धन्यवाद! हम शीघ्र उत्तर देंगे।'); })
       .catch(function () {
         var m = 'Hello, I am ' + d.name + ' (' + d.phone + '). ' + d.message;
-        window.open('https://wa.me/' + C.whatsapp + '?text=' + encodeURIComponent(m), '_blank');
+        window.open('https://wa.me/' + C.whatsapp + '?text=' + encodeURIComponent(m), '_blank', 'noopener,noreferrer');
         bvksToast('Opening WhatsApp to send your message.', 'आपका संदेश भेजने के लिए WhatsApp खुल रहा है।');
       }).finally(function () { btn.disabled = false; });
   });
