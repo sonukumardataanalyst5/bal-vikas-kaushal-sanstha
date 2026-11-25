@@ -11,8 +11,8 @@ window.BVKS = {
   phone: "9818805171",
   whatsapp: "919818805171",
   email: "info@balvikaskaushalsanstha.in",      // TODO confirm real email
-  address_en: "Faridabad, Haryana, India",       // TODO full address
-  address_hi: "फरीदाबाद, हरियाणा, भारत",
+  address_en: "House No. 429, Gali No. 08, Vinay Nagar, Agwanpur, Faridabad, Haryana - 121003",
+  address_hi: "मकान नं. 429, गली नं. 08, विनय नगर, अगवानपुर, फरीदाबाद, हरियाणा - 121003",
 
   // ---- Payments ----
   // Set paymentsLive:true after Razorpay keys are added in Vercel env vars
@@ -27,7 +27,7 @@ window.BVKS = {
   // ---- Look ----
   theme: "forest",       // final palette: saffron | forest | teal | plum | clay
   showThemes: false,      // palette preview picker; set to false once a palette is approved
-  has80G: false,                                 // flip to true only when 80G certificate is held
+  has80G: true,
   hasFCRA: false,
 
   // ---- Bank transfer / UPI (PhonePe test setup) ----

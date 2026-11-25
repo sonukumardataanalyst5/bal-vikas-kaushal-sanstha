@@ -14,8 +14,8 @@
    "hi": "फरीदाबाद, हरियाणा"
   },
   "address": {
-   "en": "Faridabad, Haryana, India (full address to be added)",
-   "hi": "फरीदाबाद, हरियाणा, भारत (पूरा पता जोड़ा जाएगा)"
+   "en": "House No. 429, Gali No. 08, Vinay Nagar, Agwanpur, Faridabad, Haryana - 121003",
+   "hi": "मकान नं. 429, गली नं. 08, विनय नगर, अगवानपुर, फरीदाबाद, हरियाणा - 121003"
   },
   "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=77.20%2C28.33%2C77.40%2C28.48&layer=mapnik",
   "monthlyAmount": 100,
@@ -36,7 +36,7 @@
    5000
   ],
   "paymentsLive": false,
-  "has80G": false,
+  "has80G": true,
   "hasFCRA": false,
   "razorpayKeyId": "",
   "bank": {
@@ -861,8 +861,8 @@
     "hi": "क्या मेरा दान कर-मुक्त है?"
    },
    "a": {
-    "en": "Tax benefits (such as 80G) apply only when the trust holds a valid certificate. We will update this page and your receipt as soon as it is available.",
-    "hi": "कर लाभ (जैसे 80G) तभी लागू होते हैं जब संस्था के पास वैध प्रमाणपत्र हो। उपलब्ध होते ही यह पृष्ठ और आपकी रसीद अपडेट की जाएगी।"
+    "en": "Yes. Bal Vikas Kaushal Sanstha holds Income Tax 80G provisional approval (Form No. 10AC, URN: AACTB7155MF20231, PAN: AACTB7155M, valid from AY 2024-25 to AY 2026-27).",
+    "hi": "हाँ। बाल विकास कौशल संस्था आयकर विभाग द्वारा धारा 80G के अंतर्गत स्वीकृत है (Form No. 10AC, URN: AACTB7155MF20231, PAN: AACTB7155M, AY 2024-25 से 2026-27 तक मान्य)।"
    }
   },
   {

@@ -157,4 +157,25 @@
     document.body.appendChild(box);
   }
   setTheme(cur);
+  // certificate zoom lightbox
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest && e.target.closest('[data-cert-zoom]');
+    if (!btn) return;
+    var modal = document.getElementById('certModal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'certModal';
+      modal.className = 'cert-modal';
+      modal.setAttribute('role', 'dialog');
+      modal.setAttribute('aria-modal', 'true');
+      modal.innerHTML = '<div class="cert-modal-box"><div class="cert-modal-bar"><b id="certModalTitle"></b><button type="button" class="cert-modal-close" aria-label="Close">×</button></div><img id="certModalImg" src="" alt=""></div>';
+      document.body.appendChild(modal);
+      modal.addEventListener('click', function (ev) { if (ev.target === modal || ev.target.closest('.cert-modal-close')) modal.classList.remove('open'); });
+      document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') modal.classList.remove('open'); });
+    }
+    var src = btn.getAttribute('data-cert-zoom'), title = btn.getAttribute('data-cert-title') || 'Government 80G Certificate (Form No. 10AC)';
+    var img = document.getElementById('certModalImg'), ttl = document.getElementById('certModalTitle');
+    img.src = src; img.alt = title; ttl.textContent = title;
+    modal.classList.add('open');
+  });
 })();
