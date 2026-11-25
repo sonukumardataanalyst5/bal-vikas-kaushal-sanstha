@@ -532,8 +532,9 @@ html.hyd body{opacity:0}
 .upi-side{display:flex;flex-direction:column;gap:12px;min-width:0;flex:1;align-items:flex-start}
 .upi-amt{margin:0;font-size:.9rem;color:var(--ink2)}
 .upi-id{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.upi-id span{font-size:.78rem;font-weight:700;color:var(--muted)}.upi-id code{font:700 .92rem ui-monospace,monospace;background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 10px;word-break:break-all}
-.upi-app{display:none}.upi-app[aria-disabled=true]{opacity:.55}
-@media (hover:none),(pointer:coarse){.upi-app{display:inline-flex}}
+.upi-app{display:inline-flex;width:100%;justify-content:center}.upi-app[aria-disabled=true]{opacity:.55}
+.upi-apps-btns{display:flex;flex-direction:column;gap:8px;width:100%}
+.upi-apps-btns .btn{width:100%;justify-content:center}
 @media (max-width:1020px){.cgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.cgrid,.cpick{grid-template-columns:1fr}.upi-row{flex-direction:column;align-items:stretch}.qr-card{align-self:center}.upi-side{align-items:stretch}.tiers{gap:8px}}
 

@@ -57,16 +57,26 @@
   }
   function syncUpi() {
     var box = $('#upiBox'), show = state.freq === 'once' && !!upiId && (!!(C.bank && C.bank.upi) || sample);
-    box.style.display = show ? 'block' : 'none'; if (!show) return;
+    box.style.display = show ? 'block' : 'none';
+    var hideDemoMain = !C.paymentsLive && show && !sample;
+    if ($('#payBtn')) $('#payBtn').style.display = hideDemoMain ? 'none' : '';
+    if ($('#secureRow')) $('#secureRow').style.display = hideDemoMain ? 'none' : '';
+    if (!show) return;
     $('#upiId').textContent = sample ? 'yourtrust@bank' : upiId; $('#upiSample').style.display = sample ? 'block' : 'none';
     var ppRow = $('#phonepeRow'), ppNo = (C.bank && C.bank.phonepe) || '';
     if (ppRow) { ppRow.style.display = (!sample && ppNo) ? '' : 'none'; if (ppNo) $('#phonepeNo').textContent = ppNo; }
     if ($('#qrVpa')) $('#qrVpa').textContent = sample ? 'yourtrust@bank' : upiId;
     if ($('#qrAmtPill')) $('#qrAmtPill').textContent = state.amt > 0 ? fmt(state.amt) + (L() === 'hi' ? ' · UPI से दें' : ' · Pay via UPI') : (L() === 'hi' ? 'कोई भी राशि · UPI' : 'Any Amount · UPI');
-    var amtValid = state.amt >= MINONCE && state.amt <= MAXAMT, canQr = !sample && (state.amt === 0 || amtValid), link = upiLink(), a = $('#upiApp');
+    var amtValid = state.amt >= MINONCE && state.amt <= MAXAMT, canQr = !sample && (state.amt === 0 || amtValid), link = upiLink(), a = $('#upiApp'), pp = $('#phonepeApp');
+    var ppLink = link.replace(/^upi:\/\//, 'phonepe://');
     box.classList.toggle('noamt', !canQr);
     if (canQr) drawQr(link); else $('#upiQr').innerHTML = '<span class="qr-wait">' + (L() === 'hi' ? 'सही राशि चुनें' : 'Enter a valid amount') + '</span>';
     a.href = !canQr ? '#' : link; a.setAttribute('aria-disabled', !canQr ? 'true' : 'false');
+    if (pp) {
+      pp.href = !canQr ? '#' : ppLink; pp.setAttribute('aria-disabled', !canQr ? 'true' : 'false');
+      if ($('#ppBtnEn')) $('#ppBtnEn').textContent = state.amt > 0 ? 'Pay ' + fmt(state.amt) + ' via PhonePe App' : 'Open PhonePe App';
+      if ($('#ppBtnHi')) $('#ppBtnHi').textContent = state.amt > 0 ? 'PhonePe ऐप से ' + fmt(state.amt) + ' दें' : 'PhonePe ऐप खोलें';
+    }
   }
 
   function altSync() {   // show the "UPI QR / bank transfer" fold only when it has something to show
@@ -110,7 +120,19 @@
   }
   $('#upiCopy').addEventListener('click', function () { if (!sample) copyBtn(this, upiId); });
   if ($('#phonepeCopy')) $('#phonepeCopy').addEventListener('click', function () { copyBtn(this, (C.bank && C.bank.phonepe) || ''); });
-  $('#upiApp').addEventListener('click', function (e) { if (this.getAttribute('aria-disabled') === 'true') { e.preventDefault(); bvksToast(sample ? 'Preview only: the real UPI ID is not added yet.' : 'Please choose an amount first.', sample ? 'केवल प्रीव्यू: असली UPI आईडी अभी जोड़ी नहीं गई है।' : 'पहले राशि चुनें।'); } });
+  [$('#upiApp'), $('#phonepeApp')].forEach(function (el) {
+    if (!el) return;
+    el.addEventListener('click', function (e) {
+      if (this.getAttribute('aria-disabled') === 'true') {
+        e.preventDefault();
+        return bvksToast(sample ? 'Preview only: the real UPI ID is not added yet.' : 'Please enter a valid amount.', sample ? 'केवल प्रीव्यू: असली UPI आईडी अभी जोड़ी नहीं गई है।' : 'कृपया सही राशि चुनें।');
+      }
+      if (!/Android|iPhone|iPad|iPod/i.test(navigator.userAgent || '')) {
+        e.preventDefault();
+        bvksToast('Direct UPI app works on mobile phones — please scan the QR code using PhonePe / GPay.', 'सीधा UPI ऐप मोबाइल पर खुलता है — लैपटॉप/डेस्कटॉप से PhonePe / GPay से QR कोड स्कैन करें।');
+      }
+    });
+  });
   sync(); showCause(!!state.cause);
   document.querySelectorAll('.lang button').forEach(function (b) { b.addEventListener('click', function () { setTimeout(sync, 0); }); });
   if (location.hash === '#choose') { var ch = $('#choose'); if (ch) ch.scrollIntoView(); }
