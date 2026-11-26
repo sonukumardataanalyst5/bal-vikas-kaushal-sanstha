@@ -2,4 +2,9 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
-Sitemap: https://balvikaskaushalsanstha.in/sitemap.xml
+Sitemap: https://balvikashkaushalsanstha.org/sitemap.xml
+
+
+
+
+
