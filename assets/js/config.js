@@ -10,7 +10,7 @@ window.BVKS = {
   president_hi: "श्री सुबोध कुमार",
   phone: "9818805171",
   whatsapp: "919818805171",
-  email: "info@balvikaskaushalsanstha.in",      // TODO confirm real email
+  email: "balvikaskaushalsanstha@gmail.com",       
   address_en: "House No. 429, Gali No. 08, Vinay Nagar, Agwanpur, Faridabad, Haryana - 121003",
   address_hi: "मकान नं. 429, गली नं. 08, विनय नगर, अगवानपुर, फरीदाबाद, हरियाणा - 121003",
 
