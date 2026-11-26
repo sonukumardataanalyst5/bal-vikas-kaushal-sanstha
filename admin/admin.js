@@ -374,7 +374,7 @@
     (ST.content.causes || []).forEach(x => links.push([(x.t && (x.t.en || x.t.hi)) || x.key, base + 'donate.html?cause=' + encodeURIComponent(x.key) + '&freq=once']));
     const lbox = h('div', { class: 'links' });
     links.forEach(([name, url]) => {
-      const msg = 'बाल विकास कौशल संस्था से जुड़ें और बच्चों के भविष्य में सहयोग करें / Join Bal Vikas Kaushal Sanstha and support a child\'s future: ' + url;
+      const msg = 'बाल विकास कौशल संस्था से जुड़ें और बच्चों के भविष्य में सहयोग करें / Join Bal Vikash Kaushal Sanstha and support a child\'s future: ' + url;
       const cp = h('button', { class: 'btn line sm', type: 'button', onclick: () => { const done = () => toast('Link copied.'); if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, () => toast(url)); else toast(url); } }, 'Copy link');
       const wa = h('a', { class: 'btn pri sm', href: 'https://wa.me/?text=' + encodeURIComponent(msg), target: '_blank', rel: 'noopener' }, 'Share on WhatsApp');
       lbox.appendChild(h('div', { class: 'lk' }, [h('div', { class: 'lkn' }, [h('b', {}, name), h('small', {}, url.replace(/^https?:\/\//, ''))]), h('div', { class: 'lka' }, [cp, wa])]));
@@ -558,7 +558,7 @@
     const k = NAV.findIndex(n => n[0] === 'more'), main = NAV.slice(0, k), more = NAV.slice(k + 1);
     const cur = (location.hash.replace(/^#\//, '') || 'dashboard');
     const side = h('aside', { class: 'side', id: 'side' }, [
-      h('div', { class: 'brand' }, [h('img', { src: '../assets/img/logo.svg', alt: '' }), h('b', {}, ['Website admin', h('small', {}, 'Bal Vikas Kaushal Sanstha')])]),
+      h('div', { class: 'brand' }, [h('img', { src: '../assets/img/logo.svg', alt: '' }), h('b', {}, ['Website admin', h('small', {}, 'Bal Vikash Kaushal Sanstha')])]),
       h('nav', { 'aria-label': 'Admin menu' }, main.map(n => n[0] === 'grp' ? h('div', { class: 'grp' }, n[1]) : link(n)).concat([h('details', { class: 'more', open: MORE.indexOf(cur) > -1 }, [h('summary', {}, NAV[k][1])].concat(more.map(link)))])),
       h('div', { class: 'foot' }, [langSwitch(), h('a', { href: '../', target: '_blank', rel: 'noopener' }, 'View website ↗'), h('button', { type: 'button', onclick: () => api('logout', {}).then(() => { ST = null; showLogin(); }).catch(fail) }, 'Sign out')])]);
     const top = h('div', { class: 'top' }, [h('button', { type: 'button', 'aria-label': 'Menu', onclick: () => side.classList.toggle('open') }, '☰'), h('b', {}, 'Website admin'), langSwitch()]);
@@ -578,7 +578,7 @@
     app.innerHTML = '';
     const err = h('p', { style: 'color:#B3261E;font-weight:600;margin:10px 0 0;min-height:1.4em' }), btn = h('button', { class: 'btn pri', type: 'submit', style: 'width:100%;margin-top:6px' }, btnLabel);
     const f = h('form', { class: 'form', onsubmit: e => { e.preventDefault(); err.textContent = ''; btn.disabled = true; onGo(err).finally(() => { btn.disabled = false; }); } }, [].concat(body, btn, err));
-    app.appendChild(h('div', { class: 'auth' }, h('div', { class: 'box' }, [h('div', { style: 'display:flex;justify-content:flex-end;margin:-6px 0 6px' }, langSwitch()), h('div', { class: 'logo' }, [h('img', { src: '../assets/img/logo.svg', alt: '' }), h('div', {}, [h('h1', {}, title), h('small', { style: 'color:#5b6b64' }, 'Bal Vikas Kaushal Sanstha')])]), intro ? h('p', {}, intro) : null, f])));
+    app.appendChild(h('div', { class: 'auth' }, h('div', { class: 'box' }, [h('div', { style: 'display:flex;justify-content:flex-end;margin:-6px 0 6px' }, langSwitch()), h('div', { class: 'logo' }, [h('img', { src: '../assets/img/logo.svg', alt: '' }), h('div', {}, [h('h1', {}, title), h('small', { style: 'color:#5b6b64' }, 'Bal Vikash Kaushal Sanstha')])]), intro ? h('p', {}, intro) : null, f])));
     const i = $('input'); if (i) i.focus();
   }
   const pwField = (id, label, auto) => h('div', { class: 'fld' }, [h('label', { class: 'l', for: id }, label), h('input', { class: 'in', id, type: 'password', autocomplete: auto || 'current-password', required: true })]);

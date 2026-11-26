@@ -40,12 +40,12 @@
   "hasFCRA": false,
   "razorpayKeyId": "",
   "bank": {
-   "holder": "Bal Vikas Kaushal Sanstha",
+   "holder": "Bal Vikash Kaushal Sanstha",
    "account": "",
    "ifsc": "",
    "bankName": "",
    "upi": "8506945362@ybl",
-   "upiName": "Bal Vikas Kaushal Sanstha",
+   "upiName": "Bal Vikash Kaushal Sanstha",
    "phonepe": "8506945362"
   },
   "social": {
@@ -861,7 +861,7 @@
     "hi": "क्या मेरा दान कर-मुक्त है?"
    },
    "a": {
-    "en": "Yes. Bal Vikas Kaushal Sanstha holds Income Tax 80G provisional approval (Form No. 10AC, URN: AACTB7155MF20231, PAN: AACTB7155M, valid from AY 2024-25 to AY 2026-27).",
+    "en": "Yes. Bal Vikash Kaushal Sanstha holds Income Tax 80G provisional approval (Form No. 10AC, URN: AACTB7155MF20231, PAN: AACTB7155M, valid from AY 2024-25 to AY 2026-27).",
     "hi": "हाँ। बाल विकास कौशल संस्था आयकर विभाग द्वारा धारा 80G के अंतर्गत स्वीकृत है (Form No. 10AC, URN: AACTB7155MF20231, PAN: AACTB7155M, AY 2024-25 से 2026-27 तक मान्य)।"
    }
   },

@@ -3,7 +3,7 @@
    The admin's saved settings override the values below.
    ========================================================== */
 window.BVKS = {
-  name_en: "Bal Vikas Kaushal Sanstha",
+  name_en: "Bal Vikash Kaushal Sanstha",
   name_hi: "बाल विकास कौशल संस्था",
   regNo: "13719",
   president_en: "Shri Subodh Kumar",
@@ -31,7 +31,7 @@ window.BVKS = {
   hasFCRA: false,
 
   // ---- Bank transfer / UPI (PhonePe test setup) ----
-  bank: { holder: "Bal Vikas Kaushal Sanstha", account: "", ifsc: "", bankName: "", upi: "8506945362@ybl", upiName: "Bal Vikas Kaushal Sanstha", phonepe: "8506945362" },
+  bank: { holder: "Bal Vikash Kaushal Sanstha", account: "", ifsc: "", bankName: "", upi: "8506945362@ybl", upiName: "Bal Vikash Kaushal Sanstha", phonepe: "8506945362" },
 
   social: { facebook: "", instagram: "", youtube: "" }
 };
