@@ -179,3 +179,20 @@
     modal.classList.add('open');
   });
 })();
+
+/* ===== Homepage 3D Logo Intro ===== */
+(function () {
+  var intro = document.getElementById('bvksIntro');
+  if (!intro || document.documentElement.classList.contains('no-intro')) return;
+  var closed = false;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function closeIntro() {
+    if (closed) return;
+    closed = true;
+    intro.classList.add('out');
+    setTimeout(function () { intro.classList.add('gone'); }, 580);
+  }
+  var timer = setTimeout(closeIntro, reduce ? 750 : 2500);
+  intro.addEventListener('click', function () { clearTimeout(timer); closeIntro(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { clearTimeout(timer); closeIntro(); } });
+})();
