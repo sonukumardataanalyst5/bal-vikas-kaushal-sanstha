@@ -4,7 +4,7 @@
   "regNo": "13719",
   "phone": "9818805171",
   "whatsapp": "9818805171",
-  "email": "balvikaskaushalsanstha@gmail.com",
+  "email": "balvikashkaushalsanstha@gmail.com",
   "president": {
    "en": "Shri Subodh Kumar",
    "hi": "श्री सुबोध कुमार"
@@ -84,7 +84,10 @@
   "waysMonthly": "photo-1692269725980-495f94b9d7a4",
   "waysOnce": "photo-1642140027869-03591a109d61",
   "donateSide": "photo-1692269725911-87697c558be1",
-  "founder": "assets/img/founder.jpg"
+  "founder": "assets/img/founder.jpg",
+  "jyotiRani": "assets/img/jyoti_rani.jpeg",
+  "satishKumar": "assets/img/satish_kumar.jpeg",
+  "shaileshKumar": "assets/img/shailesh_kumar.jpeg"
  },
  "slides": [
   {
@@ -803,8 +806,18 @@
   },
   {
    "name": {
-    "en": "[Secretary name]",
-    "hi": "[सचिव का नाम]"
+    "en": "Jyoti Rani",
+    "hi": "ज्योति रानी"
+   },
+   "role": {
+    "en": "Vice President",
+    "hi": "उपाध्यक्ष"
+   }
+  },
+  {
+   "name": {
+    "en": "Satish Kumar",
+    "hi": "सतीश कुमार"
    },
    "role": {
     "en": "Secretary",
@@ -813,12 +826,12 @@
   },
   {
    "name": {
-    "en": "[Treasurer name]",
-    "hi": "[कोषाध्यक्ष का नाम]"
+    "en": "Shailesh Kumar",
+    "hi": "शैलेश कुमार"
    },
    "role": {
-    "en": "Treasurer",
-    "hi": "कोषाध्यक्ष"
+    "en": "Member",
+    "hi": "सदस्य"
    }
   }
  ],
