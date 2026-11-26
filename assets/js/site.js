@@ -184,15 +184,25 @@
 (function () {
   var intro = document.getElementById('bvksIntro');
   if (!intro || document.documentElement.classList.contains('no-intro')) return;
-  var closed = false;
+  var closed = false, started = false, timer;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
   function closeIntro() {
     if (closed) return;
     closed = true;
     intro.classList.add('out');
-    setTimeout(function () { intro.classList.add('gone'); }, 580);
+    setTimeout(function () { intro.classList.add('gone'); }, 520);
   }
-  var timer = setTimeout(closeIntro, reduce ? 750 : 2500);
+  function startAnim() {
+    if (started || closed) return;
+    started = true;
+    requestAnimationFrame(function () {
+      intro.classList.add('play');
+      timer = setTimeout(closeIntro, reduce ? 700 : 2100);
+    });
+  }
+  var img = document.getElementById('bvksIntroImg');
+  if (img && img.decode) img.decode().then(startAnim, startAnim); else startAnim();
+  setTimeout(startAnim, 180);
   intro.addEventListener('click', function () { clearTimeout(timer); closeIntro(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { clearTimeout(timer); closeIntro(); } });
 })();
