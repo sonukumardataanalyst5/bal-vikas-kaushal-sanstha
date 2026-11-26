@@ -189,7 +189,7 @@
       var d = x[1];
       var opt = {
         key: d.key || C.razorpayKeyId, name: C.name_en, description: (state.freq === 'monthly' ? 'Monthly support – ' : 'Donation – ') + cs.en,
-        image: location.origin + '/assets/img/logo.svg', prefill: { name: w.name, email: w.email, contact: w.phone },
+        image: location.origin + '/assets/img/logo.jpg', prefill: { name: w.name, email: w.email, contact: w.phone },
         notes: { cause: state.cause }, theme: { color: '#1f6fd6' },
         modal: { ondismiss: function () { btn.disabled = false; } },
         handler: function (resp) {

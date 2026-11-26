@@ -77,12 +77,23 @@
   var bar = document.createElement('div'); bar.className = 'progress-bar'; document.body.appendChild(bar);
   var top = document.createElement('button'); top.className = 'to-top'; top.setAttribute('aria-label', 'Back to top'); top.textContent = '↑'; document.body.appendChild(top);
   top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
-  var hdr = document.querySelector('.site-header');
-  function onScroll() {
-    var h = document.documentElement, y = h.scrollTop || document.body.scrollTop, m = h.scrollHeight - h.clientHeight;
-    bar.style.width = (m > 0 ? y / m * 100 : 0) + '%'; top.classList.toggle('show', y > 700); if (hdr) hdr.classList.toggle('scrolled', y > 20);
+  var hdr = document.querySelector('.site-header') || document.querySelector('.hdr'), maxScroll = 0, ticking = false;
+  function measureScroll() { var h = document.documentElement; maxScroll = Math.max(0, h.scrollHeight - h.clientHeight); }
+  function paintScroll() {
+    ticking = false;
+    var y = window.scrollY || document.documentElement.scrollTop || 0;
+    if (!maxScroll) measureScroll();
+    var p = maxScroll > 0 ? Math.min(1, Math.max(0, y / maxScroll)) : 0;
+    bar.style.transform = 'scaleX(' + p + ')';
+    top.classList.toggle('show', y > 700);
+    if (hdr) hdr.classList.toggle('scrolled', y > 20);
   }
-  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(paintScroll); } }
+  measureScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', function () { measureScroll(); onScroll(); }, { passive: true });
+  if (window.bvksReady) window.bvksReady.then(function () { measureScroll(); paintScroll(); });
+  paintScroll();
   // stagger siblings
   document.querySelectorAll('.grid, .stats, .gallery').forEach(function (g) { Array.prototype.forEach.call(g.children, function (c, i) { c.style.setProperty('--i', Math.min(i, 6)); }); });
   // counters + progress bars
@@ -197,12 +208,14 @@
     started = true;
     requestAnimationFrame(function () {
       intro.classList.add('play');
-      timer = setTimeout(closeIntro, reduce ? 700 : 2100);
+      timer = setTimeout(closeIntro, reduce ? 600 : 1800);
     });
   }
   var img = document.getElementById('bvksIntroImg');
-  if (img && img.decode) img.decode().then(startAnim, startAnim); else startAnim();
-  setTimeout(startAnim, 180);
+  if (img && img.complete) startAnim();
+  else if (img && img.decode) img.decode().then(startAnim, startAnim);
+  else startAnim();
+  setTimeout(startAnim, 120);
   intro.addEventListener('click', function () { clearTimeout(timer); closeIntro(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { clearTimeout(timer); closeIntro(); } });
 })();
